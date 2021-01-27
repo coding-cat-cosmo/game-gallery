@@ -1,12 +1,13 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Game Collection\>
+# \<Video Game Gallery\>
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Matthew Hunt](https://github.com/coding-cat-cosmo)\>
+ > Authors: 
+ \<[Matthew Hunt](https://github.com/coding-cat-cosmo)\>
  \<[Cody Phu](https://github.com/codyphu)\>
- \<[Rohit Chandran](https://github.com/)\>
+ \<[Rohit Chandran](https://github.com/rchandran7)\>
  
  > You will be forming a group of **THREE** students and working on an interesting project. A list of proposed project ideas that have been successful in previous quarters is given in the project specifications link on iLearn. You can select an idea from the list and decide which design patterns you will use to implement it. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal. Your project needs to implement two design patterns.The project work should be divided almost equally among team members and each member is expected to work on at least one design pattern (more than one partner may work on a pattern) and some of its test cases. You can of course help each other, but it needs to be clear who will be responsible for which patterns and for which features.
  
@@ -30,6 +31,26 @@
  >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
  >   * Why the chosen design pattern will lead to a good solution to that problem
  > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+
+
+> Video Games have a large presence in todays’ society so having a database for them with all the information at a user’s fingertips could save a lot of searching and backlogging to get specific data about each game.
+
+> The language we will be implementing this database with is C++. Some tools we can employ are Doxygen (https://www.doxygen.nl/index.html ) for documentation, JSON (https://github.com/nlohmann/json) for file storage, GitHub (https://github.com/ ) for code repository, and Google Tests (https://github.com/google/googletest ) for testing. 
+
+> The input should be data about the video game such as title, genre, system, etc.
+The output should be data about the game selected by the user.
+
+
+> Flyweight, Composite and Decorator are the design patterns we will be using.
+
+> Flyweight-We picked flyweight in order to reduce memory usage within the database. If we input too much data, there will be a heavy memory cost for implementing the database. Using flyweight will reduce the redundancy of many parts of the code and save memory. This is a good solution because there will be similar data for all video games and by using flyweight it will help manage high memory cost with the database.
+
+> Composite- We picked composite in order to create a tree for our database as it is the most applicable design pattern for this idea. There will be issues with structure and organization of where video games will be placed. Using composite will organize and simplify how the data is arranged and managed. This is a good solution because it will treat the video games as collections of leaf nodes rather than individual data.
+
+> Decorator- We picked decorator in order to extend the function of base components using wrappers. When we have to implement many of the classes, there will be a need for differentiation for unique features for specific data of video games. Decorator will allow us to create more features with less code redundancy. This is a good solution because decorator will reduce the amount of code required for necessary functions and overcome limitations from just inheritance.
+
+> Taking all three of these design patterns together makes it a lot easier to create our database. By using the Composite pattern we make sure that each video game is much more easy to manage then if we tried one by one. Additionally we use flyweight to take out some of the load on the video game classes and keep those as separate classes to save memory and work for each part. Finally, adding the Decorator pattern allows us to switch between different ways to search or sort the database so that the user can use different keywords or algorithms to easily find or organize their collection. Putting it all together will help make the database as responsive as possible for the user.
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
