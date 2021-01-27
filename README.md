@@ -35,7 +35,12 @@
 
 > Video Games have a large presence in todays’ society so having a database for them with all the information at a user’s fingertips could save a lot of searching and backlogging to get specific data about each game.
 
-> The language we will be implementing this database with is C++. Some tools we can employ are Doxygen (https://www.doxygen.nl/index.html ) for documentation, JSON (https://github.com/nlohmann/json) for file storage, GitHub (https://github.com/ ) for code repository, and Google Tests (https://github.com/google/googletest ) for testing. 
+> The language we will be implementing this database with is C++.
+> * Some tools we can employ are 
+>   * Doxygen (https://www.doxygen.nl/index.html ) for documentation
+>   * JSON (https://github.com/nlohmann/json) for file storage
+>   * GitHub (https://github.com/ ) for code repository
+>   * Google Tests (https://github.com/google/googletest ) for testing.
 
 > The input should be data about the video game such as title, genre, system, etc.
 The output should be data about the game selected by the user.
