@@ -6,29 +6,29 @@
  [Rohit Chandran](https://github.com/rchandran7)
 
 ## Project Description
-> Video Games have a large presence in todays’ society so having a database for them with all the information at a user’s fingertips could save a lot of searching and backlogging to get specific data about each game.
+Video Games have a large presence in todays’ society so having a database for them with all the information at a user’s fingertips could save a lot of searching and backlogging to get specific data about each game.
 
-> The language we will be implementing this database with is C++.
-> * Tools/Technology:
->   * [Doxygen](https://www.doxygen.nl/index.html) for standardized documentation across different classes
->   * [JSON](https://github.com/nlohmann/json) for storage of data for video games within the database
->   * [GitHub](https://github.com/) for code repository and to share code with each person
->   * [Google Tests](https://github.com/google/googletest) for testing classes/units/funtions/etc.
->   * [Valgrind](https://valgrind.org/) for testing classes/units/functions for memory leaks.
+The language we will be implementing this database with is C++.
+* Tools/Technology:
+  * [Doxygen](https://www.doxygen.nl/index.html) for standardized documentation across different classes
+  * [JSON](https://github.com/nlohmann/json) for storage of data for video games within the database
+  * [GitHub](https://github.com/) for code repository and to share code with each person
+  * [Google Tests](https://github.com/google/googletest) for testing classes/units/funtions/etc.
+  * [Valgrind](https://valgrind.org/) for testing classes/units/functions for memory leaks.
 
-> The input should be data about the video game such as title, genre, system, etc.
+The input should be data about the video game such as title, genre, system, etc.
 The output should be data about the game selected by the user.
 
 
-> Flyweight, Composite and Decorator are the design patterns we will be using.
+Flyweight, Composite and Decorator are the design patterns we will be using.
 
-> Flyweight-We picked flyweight in order to reduce memory usage within the database. If we input too much data, there will be a heavy memory cost for implementing the database. Using flyweight will reduce the redundancy of many parts of the code and save memory. This is a good solution because there will be similar data for all video games and by using flyweight it will help manage high memory cost with the database.
+Flyweight-We picked flyweight in order to reduce memory usage within the database. If we input too much data, there will be a heavy memory cost for implementing the database. Using flyweight will reduce the redundancy of many parts of the code and save memory. This is a good solution because there will be similar data for all video games and by using flyweight it will help manage high memory cost with the database.
 
-> Composite- We picked composite in order to create a tree for our database as it is the most applicable design pattern for this idea. There will be issues with structure and organization of where video games will be placed. Using composite will organize and simplify how the data is arranged and managed. This is a good solution because it will treat the video games as collections of leaf nodes rather than individual data.
+Composite- We picked composite in order to create a tree for our database as it is the most applicable design pattern for this idea. There will be issues with structure and organization of where video games will be placed. Using composite will organize and simplify how the data is arranged and managed. This is a good solution because it will treat the video games as collections of leaf nodes rather than individual data.
 
-> Decorator- We picked decorator in order to extend the function of base components using wrappers. When we have to implement many of the classes, there will be a need for differentiation for unique features for specific data of video games. Decorator will allow us to create more features with less code redundancy. This is a good solution because decorator will reduce the amount of code required for necessary functions and overcome limitations from just inheritance.
+Decorator- We picked decorator in order to extend the function of base components using wrappers. When we have to implement many of the classes, there will be a need for differentiation for unique features for specific data of video games. Decorator will allow us to create more features with less code redundancy. This is a good solution because decorator will reduce the amount of code required for necessary functions and overcome limitations from just inheritance.
 
-> Taking all three of these design patterns together makes it a lot easier to create our database. By using the Composite pattern we make sure that each video game is much more easy to manage then if we tried one by one. Additionally we use flyweight to take out some of the load on the video game classes and keep those as separate classes to save memory and work for each part. Finally, adding the Decorator pattern allows us to switch between different ways to search or sort the database so that the user can use different keywords or algorithms to easily find or organize their collection. Putting it all together will help make the database as responsive as possible for the user.
+Taking all three of these design patterns together makes it a lot easier to create our database. By using the Composite pattern we make sure that each video game is much more easy to manage then if we tried one by one. Additionally we use flyweight to take out some of the load on the video game classes and keep those as separate classes to save memory and work for each part. Finally, adding the Decorator pattern allows us to switch between different ways to search or sort the database so that the user can use different keywords or algorithms to easily find or organize their collection. Putting it all together will help make the database as responsive as possible for the user.
 
 
  > ## Phase II
