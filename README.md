@@ -1,24 +1,24 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Video Game Gallery\>
+# Video Game Gallery
  > Your author list below should include links to all members GitHub (remove existing author).
  
  > Authors: 
- \<[Matthew Hunt](https://github.com/coding-cat-cosmo)\>
- \<[Cody Phu](https://github.com/codyphu)\>
- \<[Rohit Chandran](https://github.com/rchandran7)\>
+ [Matthew Hunt](https://github.com/coding-cat-cosmo),
+ [Cody Phu](https://github.com/codyphu),
+ [Rohit Chandran](https://github.com/rchandran7)
 
 ## Project Description
 > Video Games have a large presence in todays’ society so having a database for them with all the information at a user’s fingertips could save a lot of searching and backlogging to get specific data about each game.
 
 > The language we will be implementing this database with is C++.
 > * Tools/Technology:
->   * \<[Doxygen](https://www.doxygen.nl/index.html)\> for standardized documentation across different classes
->   * \<[JSON](https://github.com/nlohmann/json)\> for storage of data for video games within the database
->   * \<[GitHub](https://github.com/)\> for code repository and to share code with each person
->   * \<[Google Tests](https://github.com/google/googletest)\> for testing classes/units/funtions/etc.
->   * \<[Valgrind](https://valgrind.org/)\> for testing classes/units/functions for memory leaks.
+>   * [Doxygen](https://www.doxygen.nl/index.html) for standardized documentation across different classes
+>   * [JSON](https://github.com/nlohmann/json) for storage of data for video games within the database
+>   * [GitHub](https://github.com/) for code repository and to share code with each person
+>   * [Google Tests](https://github.com/google/googletest) for testing classes/units/funtions/etc.
+>   * [Valgrind](https://valgrind.org/) for testing classes/units/functions for memory leaks.
 
 > The input should be data about the video game such as title, genre, system, etc.
 The output should be data about the game selected by the user.
