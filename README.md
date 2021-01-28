@@ -29,6 +29,7 @@
 >   * \<[JSON](https://github.com/nlohmann/json)\> for storage of data for video games within the database
 >   * \<[GitHub](https://github.com/)\> for code repository and to share code with each person
 >   * \<[Google Tests](https://github.com/google/googletest)\> for testing classes/units/funtions/etc.
+>   * \<[Valgrind](https://valgrind.org/)\> for testing classes/units/functions for memory leaks.
 
 > The input should be data about the video game such as title, genre, system, etc.
 The output should be data about the game selected by the user.
