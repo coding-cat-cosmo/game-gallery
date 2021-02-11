@@ -49,6 +49,8 @@ There are multiple strategies used to create different types of algorithms with 
 The actual manipulation (like adding and deleting video games) of the data from the video games is done by the composite Collection and VideoGame. Collection is managing VideoGame in order to create the composite. The composite is taking on the role of encapsulating all of the Video Game information within its functionality.
 
  File manipulation is done in its own class to avoid having too heavy of a load on the base class. The class itself will work directly with a JSON file. 
+ 
+ ![Class Diagram] (https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/Class%20Diagram%20(2).png)
 
  
  > ## Phase III
