@@ -29,16 +29,6 @@ Strategy- We chose strategy in order to extend the allow the client to choose th
 Using these two design patterns together makes it a lot easier to create our database. By using the Composite pattern we make sure that each video game is much more easy to manage then if we tried one by one. Additionally, adding the Strategy pattern allows us to switch between different ways to search or sort the database so that the user can use different keywords or algorithms to easily find or organize their collection. Putting it all together will help make the database as responsive as possible for the user.
 
 
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
 
 The Client will interact with the program by selecting which sorting or selecting method they want. The Client will also be able to add and delete video games from the collection. They will also be able to print the entire database or data about a videogame they searched for.
