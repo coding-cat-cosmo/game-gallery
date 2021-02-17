@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
-#include "../header/videogame.hpp"
+//#include "../header/videogame.hpp"
+#include "videogametests.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);

@@ -1,4 +1,4 @@
-#include "../header/videogame.h"
+#include "../header/videogame.hpp"
 
 	void VideoGame::print() {
         cout << "ID: " << getId() << " Name: " << getName() << " Year: " << getYear() 
@@ -44,7 +44,7 @@
     }
 
 	int VideoGame::getPlayer() {
-        return player;
+        return players;
     }
 
 	void VideoGame::setName(string nam) {
@@ -52,7 +52,7 @@
     }
 
 	void VideoGame::setYear(int yr) {
-        year = yr
+        year = yr;
     }
 
 	void VideoGame::setPub(string pub) {
@@ -67,7 +67,7 @@
         genre = gen;
     }
 
-	void VideoGame::setRating(string rat) {
+	void VideoGame::setRating(char rat) {
         rating = rat;
     }
 
@@ -80,6 +80,6 @@
     }
 
 	void VideoGame::setPlayer(int play) {
-        player = play;
+        players = play;
     }
 
