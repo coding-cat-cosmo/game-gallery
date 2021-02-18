@@ -25,17 +25,17 @@ class VideoGame {
 		 rating(rat), size(mem), cost(value), players(play) { id = newID++;}
 
 		~VideoGame() {}
-		void print();
-		int getId();
-		string getName();
-		int getYear();
-		string getPub();
-		string getSystem();
-		string getGenre();
-		char getRating();
-		string getSize();
-		int getCost();
-		int getPlayer();
+		void print() const;
+		int getId() const;
+		string getName() const;
+		int getYear() const;
+		string getPub() const;
+		string getSystem() const;
+		string getGenre() const;
+		char getRating() const;
+		string getSize() const;
+		int getCost() const;
+		int getPlayer() const;
 		void setName(string);
 		void setYear(int);
 		void setPub(string);
