@@ -38,6 +38,20 @@ using namespace std;
         how_sort->sort();
     }
 
+    void GameGallery::addGame(VideoGame* newGame) {
+        gal->add(newGame);
+    }
+
+    void GameGallery::delGame(VideoGame* badGame) {
+        if (how_search(badGame) == nullptr) {
+            cout << "Video Game that is trying to be deleted does not exist in this database.\n\n";
+            return;
+        }
+        else {
+            gal->delete(badGame);
+        }
+    }
+
     void GameGallery::print() const {
         cout << "Collection:\n" << gallery->print() << "\nfile name:\n" << file->fileName << endl << endl;
     }
