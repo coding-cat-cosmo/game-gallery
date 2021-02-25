@@ -6,9 +6,9 @@ set(JSON_BuildTests OFF CACHE INTERNAL "")
 
 ADD_SUBDIRECTORY(googletest)
 
-add_subdirectory(json)
+ADD_SUBDIRECTORY(json)
 
-add_library(header
+ADD_LIBRARY(header
 			header/fileManip.hpp
 			src/filemanip.cpp
 			tests/fileManipTests.hpp
@@ -26,7 +26,7 @@ ADD_EXECUTABLE(jsontest
 			src/filemanip.cpp
 			)
 
-target_link_libraries(header PRIVATE nlohmann_json::nlohmann_json)
+TARGET_LINK_LIBRARIES(header PRIVATE nlohmann_json::nlohmann_json)
 
 TARGET_LINK_LIBRARIES(jsontest PRIVATE nlohmann_json::nlohmann_json)
 
