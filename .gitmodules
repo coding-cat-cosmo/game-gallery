@@ -4,3 +4,6 @@
 [submodule "doxygen"]
 	path = doxygen
 	url = https://github.com/doxygen/doxygen.git
+[submodule "json"]
+	path = json
+	url = https://github.com/nlohmann/json.git
