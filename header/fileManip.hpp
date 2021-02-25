@@ -15,7 +15,7 @@ class fileManip{
 
 	public:
 		fileManip(std::string name);
-		~fileManip();
+		~fileManip(){}
 		void save(json j);
 		json load();
 		json newJSON();
