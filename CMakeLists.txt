@@ -18,6 +18,7 @@ ADD_EXECUTABLE(test
 			tests/test.cpp
 			src/videogame.cpp
 			src/filemanip.cpp
+      src/collection.cpp
 			)
 
 ADD_EXECUTABLE(jsontest

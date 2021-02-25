@@ -1,49 +1,49 @@
 #include "../header/videogame.hpp"
 
-	void VideoGame::print() {
+	void VideoGame::print() const {
         cout << "ID: " << getId() << " Name: " << getName() << " Year: " << getYear() 
         << " Publisher: " << getPub() << " System: " << getSystem() 
         << " Genre: " << getGenre() << " Rating: " << getRating() << " Size: " << getSize()
         << " Cost: " << getCost() << " Player: " << getPlayer() << endl << endl;
     }
 
-	int VideoGame::getId() {
+	int VideoGame::getId() const {
         return id;
     }
 
-	string VideoGame::getName() {
+	string VideoGame::getName() const {
         return name;
     }
 
-	int VideoGame::getYear() {
+	int VideoGame::getYear() const {
         return year;
     }
 
-	string VideoGame::getPub() {
+	string VideoGame::getPub() const {
         return publisher;
     }
 
-	string VideoGame::getSystem() {
+	string VideoGame::getSystem() const {
         return system;
     }
 
-	string VideoGame::getGenre() {
+	string VideoGame::getGenre() const {
         return genre;
     }
 
-	char VideoGame::getRating() {
+	char VideoGame::getRating() const {
         return rating;
     }
 
-	string VideoGame::getSize() {
+	string VideoGame::getSize() const {
         return size;
     }
 
-	int VideoGame::getCost() {
+	int VideoGame::getCost() const {
         return cost;
     }
 
-	int VideoGame::getPlayer() {
+	int VideoGame::getPlayer() const {
         return players;
     }
 
