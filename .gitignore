@@ -4,3 +4,7 @@ Makefile
 CMakefiles/
 cmake_install.cmake
 lib/
+.README.md.swp
+jsontest
+CMakeFiles/
+libheader.a

@@ -10,8 +10,9 @@
 using json = nlohmann::json;
 
 class fileManip{
-	protected:
+	private:
 		std::string filename;
+
 	public:
 		fileManip(std::string name);
 		~fileManip();

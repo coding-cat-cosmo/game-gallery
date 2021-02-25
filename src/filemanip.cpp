@@ -9,6 +9,9 @@ using json = nlohmann::json;
 	fileManip::fileManip(string name){
 	filename=name;
 	}
+	
+	fileManip::~fileManip(){
+	}
 
 	void fileManip::save(json j){
 		ofstream o;
