@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
 //#include "../header/videogame.hpp"
 #include "videogametests.hpp"
+#include "fileManipTests.hpp"
+#include "nlohmann/json.hpp"
 #include "collectiontests.hpp"
 
 int main(int argc, char **argv) {
