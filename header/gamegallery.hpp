@@ -70,7 +70,7 @@ class GameGallery {
 	 * @param: None
 	 * @return: VideoGame object
 	 */
-    VideoGame search() const;
+    VideoGame search(string key) const;
     /**
 	 * @brief: Sorts the VideoGame Collection by calling the particular run-time implementation of sorting selected
 	 * 
