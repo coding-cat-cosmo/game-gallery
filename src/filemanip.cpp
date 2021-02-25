@@ -10,8 +10,6 @@ using json = nlohmann::json;
 	filename=name;
 	}
 	
-	fileManip::~fileManip(){
-	}
 
 	void fileManip::save(json j){
 		ofstream o;
