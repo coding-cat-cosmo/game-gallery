@@ -207,7 +207,7 @@ int main() {
         }
         break;
         case '4':
-        cout << "How would you like to search for a video game?\n"
+        cout << "How would you like to sort the video games?\n"
                         << "1. Name\n"
                         << "2. Year\n"
                         << "3. Publisher\n"
