@@ -14,6 +14,7 @@ class Collection {
 	Collection() {}
 	Collection(vector<VideoGame*> game);
 	~Collection();
+	vector<VideoGame*> getCollection(){return games;};
 	void add(VideoGame*);
 	void eliminate(VideoGame*);
 	void print() const;

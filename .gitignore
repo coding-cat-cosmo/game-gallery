@@ -8,3 +8,4 @@ lib/
 jsontest
 CMakeFiles/
 libheader.a
+jsonmain
