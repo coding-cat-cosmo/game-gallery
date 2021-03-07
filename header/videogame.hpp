@@ -53,6 +53,8 @@ class VideoGame {
 	 * @param: None
 	 * @return: None
 	 */
+		string getjsonstring();
+		
 		void print() const;
 		/**
 	 * @brief: returns VideoGame id

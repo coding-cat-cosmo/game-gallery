@@ -19,6 +19,7 @@ class fileManip{
 	private:
 	std::string filename;
 	Collection* gallery;
+	vector <VideoGame*> games;
 
 	public:
         fileManip(std::string name);
@@ -60,7 +61,7 @@ class fileManip{
 
 	json newJSON();
 	
-	json collectionEditor(json j);
+	
 	
 };
 
