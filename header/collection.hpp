@@ -58,6 +58,8 @@ class Collection {
 	 * @return: None
 	 */
 	void print() const;
+	VideoGame* getVideoGame(int index);
+	int getCollectionSize();
 };
 
 #endif

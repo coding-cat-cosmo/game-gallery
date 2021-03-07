@@ -25,3 +25,11 @@ void Collection::print() const {
 	games[i]->print();
    }
 }
+
+VideoGame* Collection::getVideoGame(int index) {
+   return games.at(index);
+}
+
+int Collection::getCollectionSize() {
+   return games.size();
+}
