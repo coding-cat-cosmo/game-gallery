@@ -23,23 +23,25 @@ using namespace std;
     }
 
     void GameGallery::setSearch(Searcher* search) {
+        delete how_search;
         how_search = search;
     }
 
     void GameGallery::setSort(Sorter* sort) {
+        delete how_sort;
         how_sort = sort;
     }
 
-    VideoGame GameGallery::search() const {
-        return how_search->search();
+    VideoGame GameGallery::search(string key) const {
+        return how_search->search(key);
     }
 
     void GameGallery::sort() {
-        how_sort->sort();
+        how_sort->sort(gallery);
     }
 
     void GameGallery::addGame(VideoGame* newGame) {
-        gal->add(newGame);
+        gallery->add(newGame);
     }
 
     void GameGallery::delGame(VideoGame* badGame) {
@@ -48,7 +50,7 @@ using namespace std;
             return;
         }
         else {
-            gal->delete(badGame);
+            gallery->delete(badGame);
         }
     }
 

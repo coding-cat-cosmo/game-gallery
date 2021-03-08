@@ -18,7 +18,11 @@ ADD_EXECUTABLE(test
 			tests/test.cpp
 			src/videogame.cpp
 			src/filemanip.cpp
-      			src/collection.cpp
+      src/collection.cpp
+			src/sort_name.cpp
+			src/sort_year.cpp
+			src/sort_genre.cpp
+			src/sort_pub.cpp
 			)
 
 ADD_EXECUTABLE(jsonmain

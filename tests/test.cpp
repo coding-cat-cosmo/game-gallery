@@ -4,7 +4,8 @@
 #include "fileManipTests.hpp"
 #include "nlohmann/json.hpp"
 #include "searchtest.hpp"
-//#include "collectiontests.hpp"
+#include "collectiontests.hpp"
+#include "sortertests.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
