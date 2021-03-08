@@ -33,3 +33,9 @@ VideoGame* Collection::getVideoGame(int index) {
 int Collection::getCollectionSize() {
    return games.size();
 }
+
+void Collection::swapGames(int i, int j) {
+   VideoGame* temp = games.at(i);
+   games.at(i) = games.at(j);
+   games.at(j) = temp;
+}
