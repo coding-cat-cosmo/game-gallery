@@ -25,3 +25,17 @@ void Collection::print() const {
 	games[i]->print();
    }
 }
+
+VideoGame* Collection::getVideoGame(int index) {
+   return games.at(index);
+}
+
+int Collection::getCollectionSize() {
+   return games.size();
+}
+
+void Collection::swapGames(int i, int j) {
+   VideoGame* temp = games.at(i);
+   games.at(i) = games.at(j);
+   games.at(j) = temp;
+}

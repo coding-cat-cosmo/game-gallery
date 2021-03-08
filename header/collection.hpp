@@ -13,9 +13,9 @@ using namespace std;
 	* 
 	*/
 class Collection {
-    private:
+   private:
 	vector<VideoGame*> games;
-    public:
+   public:
 	/**
 	 * @brief: basic constructor that initializes an empty collection
 	 *
@@ -58,6 +58,27 @@ class Collection {
 	 * @return: None
 	 */
 	void print() const;
+	/**
+	 * @brief: returns VideoGame at a certain index
+	 *
+	 * @param: index of VideoGame to be returned
+	 * @return: VideoGame object pointer
+	 */
+	VideoGame* getVideoGame(int index);
+	/**
+	 * @brief: returns the size of the collection
+	 *
+	 * @param: None
+	 * @return: Number of video games in the collection
+	 */
+	int getCollectionSize();
+	/**
+	 * @brief: swaps VideoGames in the games vector at the given indexes
+	 *
+	 * @param: indexes of VideoGames to be swapped
+	 * @return: None
+	 */
+	void swapGames(int i, int j);
 };
 
 #endif

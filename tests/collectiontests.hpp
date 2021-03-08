@@ -1,4 +1,3 @@
-#define private public //to access private member variables for testing
 #ifndef COLLECTIONTESTS_HPP
 #define COLLECTIONTESTS_HPP
 #include "../header/collection.hpp"
@@ -9,7 +8,7 @@ TEST(CollectionTest, AddConstructorTest) {
    VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
    Collection* gallery = new Collection(vidGames);
    gallery->add(vid);
-   EXPECT_EQ(gallery->games[0]->getName(), "Pac-Man");
+   EXPECT_EQ(gallery->getVideoGame(0)->getName(), "Pac-Man");
    delete gallery;
 }
 
@@ -21,13 +20,13 @@ TEST(CollectionTest, RemoveTest) {
    gallery->add(vid);
    gallery->add(vidTwo);
    gallery->eliminate(vid);
-   EXPECT_EQ(gallery->games[0]->getName(), "Minecraft");
+   EXPECT_EQ(gallery->getVideoGame(0)->getName(), "Minecraft");
    delete gallery;
 }
 
 TEST(CollectionTest, EmptyConstructorTest) {
    Collection gallery;
-   EXPECT_EQ(gallery.games.empty(), true);
+   EXPECT_EQ(gallery.getCollectionSize(), 0);
 }
 
 //Test for print function using ostream
