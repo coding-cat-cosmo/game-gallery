@@ -5,22 +5,20 @@
 #include "search.hpp"
 #include <iostream>
 
-class searchPub: public searcher{
+class SearchPub: public Searcher{
         public:
-        void search(vector <VideoGame*> games, std::string searchTerm){
-                int tracker=0;
-                for(int i=0;i<games.size();++i){
-                        if(games[i]->getPub()==searchTerm){
-                        games[i]->print();
-                        tracker++;
+	SearchPub(){}
+	~SearchPub(){}
+        VideoGame* search(Collection* gal, std::string searchTerm){
+
+                for(int i=0;i<gal->getCollection().size();++i){
+                        if(gal->getCollection()[i]->getPub()==searchTerm){
+                        return gal->getCollection()[i];
                         }
-                }
-                if(tracker==0){
-                std::cout<<"No games with publisher: "<<searchTerm<<std::endl;
                 }
         }
 
-}
+};
 
 #endif // __SEARCH_PUB_HPP__
 

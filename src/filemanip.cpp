@@ -28,12 +28,15 @@ using json = nlohmann::json;
 			s=j.dump();
 		if(gallery!=nullptr&&games.size()!=0){
 			for(int i=0;i<games.size();++i){
-				sj[i]=games[i]->getjsonstring();
+		//sj[i]={ {"Id",games[i]->getId()}, {"Name",games[i]->getName()}, {"Year",games[i]->getYear()}, {"Publisher",games[i]->getPub()},{"System",games[i]->getSystem()}, {"Genre",games[i]->getGenre()}, {"Size",games[i]->getSize()}, {"Cost",games[i]->getCost()}, {"Player",games[i]->getPlayer()}};
+			//made a json initializer instead of string to json initializer but format did not look goo but kept it incase client wants it in that format	
+			sj[i]=games[i]->getjsonstring();
 			}
 		}
 		else{
 		sj=s;
 		}
+	
 		o << sj;
 		o.close();
 

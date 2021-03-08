@@ -3,7 +3,7 @@
 
 	string VideoGame::getjsonstring(){
 	string s;
-	s= "ID: " + to_string(getId())+ ", Name: " + getName() + ", Year: " + to_string(getYear())
+	s= "{ID: " + to_string(getId())+ ", Name: " + getName() + ", Year: " + to_string(getYear())
         + ", Publisher: " + getPub() + ", System: " + getSystem()
         + ", Genre: " + getGenre() + ", Rating: " + getRating() + ", Size: " + getSize()
         + ", Cost: " + to_string(getCost()) + ", Player: " + to_string(getPlayer())+" }";

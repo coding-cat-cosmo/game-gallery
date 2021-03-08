@@ -52,7 +52,7 @@ TEST(filemanipTest, GalleryTest){
         file->save(j);
 	json t=file->load();
         
-	EXPECT_EQ("[\"ID: 3, Name: Pac-Man, Year: 2000, Publisher: NAMACO, System: Genesis, Genre: puzzle, Rating: T, Size: 2 GB, Cost: 40, Player: 2 }\"]",t.dump());
+	EXPECT_EQ("[\"{ID: 3, Name: Pac-Man, Year: 2000, Publisher: NAMACO, System: Genesis, Genre: puzzle, Rating: T, Size: 2 GB, Cost: 40, Player: 2 }\"]",t.dump());
         delete file;
         delete gallery;
         remove("n2");

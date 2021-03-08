@@ -20,9 +20,8 @@ int main(){
         json j=file->newJSON();
         file->save(j);
 	json l=file->load();
-	cout << l << endl;
 	cout << l.dump()<<endl;
-	remove ("n2");
+	//remove ("n2");
 	delete gal;
 	delete file;
 

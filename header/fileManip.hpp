@@ -40,7 +40,7 @@ class fileManip{
 	/**
  	 * @brief: saves the file to the database
   	 * 
-  	 * @param: json j for json object to save to file
+  	 * @param: Json object to save to file 
   	 * @return: None
   	 */
 	void save(json j);
