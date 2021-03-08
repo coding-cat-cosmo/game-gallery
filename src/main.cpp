@@ -2,7 +2,10 @@
 #include "../header/collection.hpp"
 //#include "nlohmann/json.hpp"
 #include "../header/fileManip.hpp"
-#include "../header/videogame.hpp"
+#include "../header/sort_name.hpp"
+#include "../header/sort_pub.hpp"
+#include "../header/sort_genre.hpp"
+#include "../header/sort_year.hpp"
 #include <sstream>
 
 int main() {
@@ -224,7 +227,7 @@ int main() {
             gall->sort();
         }
         else if (type == '3') {
-            gall->setSort(new Sort_Publisher);
+            gall->setSort(new Sort_Pub);
             gall->sort();
         }
         else if (type == '4') {

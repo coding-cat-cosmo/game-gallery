@@ -1,5 +1,9 @@
 #ifndef GAMEGALLERY_HPP
 #define GAMEGALLERY_HPP
+#include "collection.hpp"
+#include "fileManip.hpp"
+#include "searcher.hpp"
+#include "sorter.hpp"
 
 /**
 	 * @brief: This class has all the main functionality for any desirable action to be ran on the videoGame database
@@ -8,7 +12,7 @@
 class GameGallery {
     private:
     Collection* gallery;
-    Filemanip* file;
+    fileManip* file;
     Searcher* how_search;
     Sorter* how_sort;
 
@@ -19,7 +23,7 @@ class GameGallery {
 	 * @param: None
 	 * @return: GameGallery Object
 	 */
-    GameGallery() : gallery(new Collection()), file(new Filemanip()), how_search(new Search_Name()), how_sort(new Sort_Name()) {}
+    GameGallery() : gallery(new Collection()), file(new fileManip()), how_search(new Search_Name()), how_sort(new Sort_Name()) {}
     /**
 	 * @brief: constructor of the GameGallery class that initializes with passed in objects
 	 * 

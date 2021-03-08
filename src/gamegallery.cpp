@@ -37,7 +37,7 @@ using namespace std;
     }
 
     void GameGallery::sort() {
-        how_sort->sort();
+        how_sort->sort(gallery);
     }
 
     void GameGallery::addGame(VideoGame* newGame) {
