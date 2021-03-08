@@ -22,7 +22,7 @@ void Collection::eliminate(VideoGame* game) {
 void Collection::print() const {
    cout << "Collection: " << endl;
    for (int i = 0; i < games.size(); i++) {
-	games[i]->print();
+	games.at(i)->print();
    }
 }
 

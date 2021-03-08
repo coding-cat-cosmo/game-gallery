@@ -37,12 +37,15 @@ class Collection {
 	 * @return: None
 	 */
 	~Collection();
+
+	vector<VideoGame*> getCollection(){return games;};
+  
 	/**
 	 * @brief: adds passed in VideoGame object to the collection
 	 *
 	 * @param: VideoGame object pointer to  be added
 	 * @return: None
-	 */
+   */
 	void add(VideoGame*);
 	/**
 	 * @brief: removes passed in VideoGame object from the collection

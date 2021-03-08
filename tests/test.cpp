@@ -3,6 +3,7 @@
 #include "videogametests.hpp"
 #include "fileManipTests.hpp"
 #include "nlohmann/json.hpp"
+#include "searchtest.hpp"
 #include "collectiontests.hpp"
 #include "sortertests.hpp"
 

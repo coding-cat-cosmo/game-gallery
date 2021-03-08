@@ -4,6 +4,8 @@
 #include <string>
 #include "nlohmann/json.hpp"
 #include <iostream>
+#include "collection.hpp"
+#include "videogame.hpp"
 
 // for convenience
 using json = nlohmann::json;
@@ -16,15 +18,18 @@ using json = nlohmann::json;
 class fileManip{
 	private:
 	std::string filename;
+	Collection* gallery;
+	vector <VideoGame*> games;
 
 	public:
+        fileManip(std::string name);
 	/**
 	 * @brief: constructor of the fileManip class that initializes with passed in objects
 	 * 
-	 * @param: None
+	 * @param: string for file name to access and Collection* for the collection of video games to access
 	 * @return: fileManip Object
 	 */
-	fileManip(std::string name);
+	fileManip(std::string name, Collection* gal);
 	/**
   	 * @brief: destructor of the fileManip class
   	 * 
@@ -35,7 +40,7 @@ class fileManip{
 	/**
  	 * @brief: saves the file to the database
   	 * 
-  	 * @param: json j for json object to save to file
+  	 * @param: Json object to save to file 
   	 * @return: None
   	 */
 	void save(json j);
@@ -55,6 +60,9 @@ class fileManip{
          */
 
 	json newJSON();
+	
+	
+	
 };
 
 

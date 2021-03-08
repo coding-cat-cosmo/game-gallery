@@ -18,21 +18,23 @@ ADD_EXECUTABLE(test
 			tests/test.cpp
 			src/videogame.cpp
 			src/filemanip.cpp
-      			src/collection.cpp
+      src/collection.cpp
 			src/sort_name.cpp
 			src/sort_year.cpp
 			src/sort_genre.cpp
 			src/sort_pub.cpp
 			)
 
-ADD_EXECUTABLE(jsontest
-			tests/jsontest.cpp
+ADD_EXECUTABLE(jsonmain
+			src/videogame.cpp
+			src/JSONmain.cpp
 			src/filemanip.cpp
+			src/collection.cpp
 			)
 
-TARGET_LINK_LIBRARIES(header PRIVATE nlohmann_json::nlohmann_json)
+TARGET_LINK_LIBRARIES(jsonmain PRIVATE nlohmann_json::nlohmann_json)
 
-TARGET_LINK_LIBRARIES(jsontest PRIVATE nlohmann_json::nlohmann_json)
+TARGET_LINK_LIBRARIES(header PRIVATE nlohmann_json::nlohmann_json)
 
 TARGET_LINK_LIBRARIES(test PRIVATE nlohmann_json::nlohmann_json)
 

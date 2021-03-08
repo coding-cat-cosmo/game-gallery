@@ -1,5 +1,16 @@
 #include "../header/videogame.hpp"
+	
 
+	string VideoGame::getjsonstring(){
+	string s;
+	s= "{ID: " + to_string(getId())+ ", Name: " + getName() + ", Year: " + to_string(getYear())
+        + ", Publisher: " + getPub() + ", System: " + getSystem()
+        + ", Genre: " + getGenre() + ", Rating: " + getRating() + ", Size: " + getSize()
+        + ", Cost: " + to_string(getCost()) + ", Player: " + to_string(getPlayer())+" }";
+	//cout << s <<endl;
+	return s;
+	}
+	
 	void VideoGame::print() const {
         cout << "ID: " << getId() << " Name: " << getName() << " Year: " << getYear() 
         << " Publisher: " << getPub() << " System: " << getSystem() 
