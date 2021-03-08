@@ -33,7 +33,7 @@ using namespace std;
     }
 
     VideoGame GameGallery::search(string key) const {
-        return how_search->search(key);
+        return how_search->search(gallery, key);
     }
 
     void GameGallery::sort() {
