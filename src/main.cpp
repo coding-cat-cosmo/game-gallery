@@ -6,6 +6,10 @@
 #include "../header/sort_pub.hpp"
 #include "../header/sort_genre.hpp"
 #include "../header/sort_year.hpp"
+#include "../header/search_year.hpp"
+#include "../header/search_name.hpp"
+#include "../header/search_pub.hpp"
+#include "../header/search_genre.hpp"
 #include <sstream>
 
 int main() {
@@ -25,10 +29,6 @@ int main() {
     stringstream ss;
     VideoGame* newGame;
     GameGallery gall;
-    //Search_Name sn;
-    //Search_Year sy;
-    //Search_Pub sp;
-    //Search_Genre sg;
 
     //gall->load();
 
@@ -93,7 +93,7 @@ int main() {
         type = input[0];
         switch (type) {
             case '1': 
-            gall->setSearch(new Search_Name);
+            gall->setSearch(new SearchName);
             cout <<"Enter the name of the Video Game\nName: ";
             getline(cin, name);
             newGame = gall.search(name);
@@ -106,7 +106,7 @@ int main() {
             }
             break;
             case '2':
-            gall->setSearch(new Search_Year);
+            gall->setSearch(new SearchYear);
             cout <<"Enter the year of the Video Game\nYear: ";
             getline(cin, input);
             newGame = gall.search(input);
@@ -119,7 +119,7 @@ int main() {
             }
             break;
             case '3':
-            gall->setSearch(new Search_Publisher);
+            gall->setSearch(new SearchPub);
             cout <<"Enter the publisher of the Video Game\nName: ";
             getline(cin, publisher);
             newGame = gall.search(publisher);
@@ -132,7 +132,7 @@ int main() {
             }
             break;
             case '4':
-            gall->setSearch(new Search_Genre);
+            gall->setSearch(new SearchGenre);
             cout <<"Enter the genre of the Video Game\nName: ";
             getline(cin, genre);
             newGame = gall.search(genre);
@@ -158,7 +158,7 @@ int main() {
         type = input[0];
         switch (type) {
             case '1': 
-            gall->setSearch(new Search_Name);
+            gall->setSearch(new SearchName);
             cout <<"Enter the name of the Video Game\nName: ";
             getline(cin, name);
             newGame = gall.search(name);
@@ -170,7 +170,7 @@ int main() {
             }
             break;
             case '2':
-            gall->setSearch(new Search_Year);
+            gall->setSearch(new SearchYear);
             cout <<"Enter the year of the Video Game\nYear: ";
             getline(cin, input);
             newGame = gall.search(input);
@@ -182,7 +182,7 @@ int main() {
             }
             break;
             case '3':
-            gall->setSearch(new Search_Publisher);
+            gall->setSearch(new SearchPub);
             cout <<"Enter the publisher of the Video Game\nName: ";
             getline(cin, publisher);
             newGame = gall.search(publisher);
@@ -194,7 +194,7 @@ int main() {
             }
             break;
             case '4':
-            gall->setSearch(new Search_Genre);
+            gall->setSearch(new SearchGenre);
             cout <<"Enter the genre of the Video Game\nName: ";
             getline(cin, genre);
             newGame = gall.search(genre);
