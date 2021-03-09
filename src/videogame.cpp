@@ -42,7 +42,7 @@
         return genre;
     }
 
-	char VideoGame::getRating() const {
+	string VideoGame::getRating() const {
         return rating;
     }
 
@@ -78,7 +78,7 @@
         genre = gen;
     }
 
-	void VideoGame::setRating(char rat) {
+	void VideoGame::setRating(string rat) {
         rating = rat;
     }
 

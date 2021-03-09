@@ -75,7 +75,7 @@ using json = nlohmann::json;
 		string pub;
 		string system;
 		string genre;
-		//string rating=j[0]["Rating"];
+		string rating;
 		string size;
 		unsigned int cost;
 		unsigned int player;
@@ -88,11 +88,11 @@ using json = nlohmann::json;
 			pub=j[i]["Publisher"];
 			system=j[i]["System"];
 			genre=j[i]["Genre"];
-		//rating
+			rating=j[i]["Rating"];
 			size=j[i]["Size"];
 			cost=j[i]["Cost"];
 			player=j[i]["Player"];
-			gallery.add(new VideoGame(name,year,pub,system,genre,change,size,cost,player));
+			gallery.add(new VideoGame(name,year,pub,system,genre,rating,size,cost,player));
 		//VideoGame* vid = new VideoGame(j[0]["Name"],j[0]["Year"],j[0]["Publisher"],j[0]["System"],j[0]["Genre"],j[0]["Size"],j[0]["Cost"],j[0]["Player"]); 
 			}
 		}	
