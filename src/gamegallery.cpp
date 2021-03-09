@@ -1,5 +1,6 @@
 #include "../header/gamegallery.hpp"
 #include <string>
+#include <nlohmann/json.hpp>
 using namespace std;
 
     GameGallery::~GameGallery() {
@@ -18,7 +19,15 @@ using namespace std;
 
     void GameGallery::load(string load_file="games.JSON") {
         file->fileName = load_file;
-        this->gallery = file->load();
+        json j=file->load();
+	Collection m=file->fileRead(j);
+	vector<VideoGame*> t1;
+	Collection* gal= new Collection(t1);
+	for(int i=0;i<m->getCollection().size();++i){
+	gal.add(new VideoGame(m->getCollection()[i]->getName(),m->getCollection()[i]->getYear(),m->getCollection()[i]->getPub(),m->getCollection()[i]->getSystem(),
+	m->getCollection()[i]->getGenre(),m->getCollection()[i]->getRating(),m->getCollection()[i]->getSize(),m->getCollection()[i]->getCost(),m->getCollection()[i]->getPlayer());
+	}
+	this->gallery=gal;
         cout << "the Video Game data has been loaded.\n\n ";
     }
 

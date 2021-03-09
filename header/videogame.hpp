@@ -16,7 +16,7 @@ class VideoGame {
 		string publisher;
 		string system;
 		string genre;
-		char rating;
+		string rating;
 		string size;
 		unsigned int cost;
 		unsigned int players;
@@ -29,14 +29,14 @@ class VideoGame {
 	 * @return: VideoGame Object
 	 */
 		VideoGame() : name("Galaga"), year(1999), publisher("ATARI"), system("Arcade Machine"), 
-		genre("shooter"), rating('E'), size("2.5 GB"), cost(35), players(1) { id = newID++; }
+		genre("shooter"), rating("E"), size("2.5 GB"), cost(35), players(1) { id = newID++; }
 		/**
 	 * @brief: constructor that initializes a basic videogame with passed in arguments
 	 * 
-	 * @param: nam: string, yr: int, sys: string, gen: string, rat: char, mem: string, value: int, play: int
+	 * @param: nam: string, yr: int, sys: string, gen: string, rat: string, mem: string, value: int, play: int
 	 * @return: VideoGame Object
 	 */
-		VideoGame(string nam, int yr, string pub, string sys, string gen, char rat, string mem,
+		VideoGame(string nam, int yr, string pub, string sys, string gen, string rat, string mem,
 		 int value, int play) : name(nam), year(yr), publisher(pub), system(sys), genre(gen), 
 		 rating(rat), size(mem), cost(value), players(play) { id = newID++;}
 
@@ -102,9 +102,9 @@ class VideoGame {
 	 * @brief: returns VideoGame rating
 	 * 
 	 * @param: None
-	 * @return: char rating of the VideoGame class
+	 * @return: string rating of the VideoGame class
 	 */
-		char getRating() const;
+		string getRating() const;
 		/**
 	 * @brief: returns VideoGame size
 	 * 
@@ -167,7 +167,7 @@ class VideoGame {
 	 * @param: string representing rating of the VideoGame
 	 * @return: None
 	 */
-		void setRating(char);
+		void setRating(string);
 		/**
 	 * @brief: sets VideoGame size
 	 * 
