@@ -1,6 +1,6 @@
 #include "../header/gamegallery.hpp"
 #include <string>
-#include <nlohmann/json.hpp>
+#include "nlohmann/json.hpp"
 using namespace std;
 
     GameGallery::~GameGallery() {
