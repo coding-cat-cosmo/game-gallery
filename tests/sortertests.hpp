@@ -8,9 +8,9 @@
 
 TEST(SorterTest, SortName) {
    vector<VideoGame*> vidGames;
-   VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
-   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", 'E', "1 GB", 27, 1);
-   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", 'E', "22 MB", 20, 1);
+   VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
+   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
+   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", "E", "22 MB", 20, 1);
    Collection* gallery = new Collection(vidGames);
    gallery->add(vid);
    gallery->add(vidTwo);
@@ -24,9 +24,9 @@ TEST(SorterTest, SortName) {
 
 TEST(SorterTest, SortYear) {
    vector<VideoGame*> vidGames;
-   VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
-   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", 'E', "1 GB", 27, 1);
-   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", 'E', "22 MB", 20, 1);
+   VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
+   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
+   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", "E", "22 MB", 20, 1);
    Collection* gallery = new Collection(vidGames);
    gallery->add(vid);
    gallery->add(vidTwo);
@@ -40,9 +40,9 @@ TEST(SorterTest, SortYear) {
 
 TEST(SorterTest, SortGenre) {
    vector<VideoGame*> vidGames;
-   VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
-   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", 'E', "1 GB", 27, 1);
-   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", 'E', "22 MB", 20, 1);
+   VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
+   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
+   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", "E", "22 MB", 20, 1);
    Collection* gallery = new Collection(vidGames);
    gallery->add(vid);
    gallery->add(vidTwo);
@@ -56,9 +56,9 @@ TEST(SorterTest, SortGenre) {
 
 TEST(SorterTest, SortPub) {
    vector<VideoGame*> vidGames;
-   VideoGame* vid = new VideoGame("Pac-Man", 2000, "Namaco", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
-   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", 'E', "1 GB", 27, 1);
-   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", 'E', "22 MB", 20, 1);
+   VideoGame* vid = new VideoGame("Pac-Man", 2000, "Namaco", "Genesis", "puzzle", "T", "2 GB", 40, 2);
+   VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
+   VideoGame* vidThree = new VideoGame("Tetris", 1989, "Nintendo", "NES", "puzzle", "E", "22 MB", 20, 1);
    Collection* gallery = new Collection(vidGames);
    gallery->add(vid);
    gallery->add(vidTwo);
