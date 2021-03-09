@@ -11,6 +11,7 @@
 #include "../header/search_pub.hpp"
 #include "../header/search_genre.hpp"
 #include <sstream>
+#include <string>
 
 int main() {
     char choice = '5';
@@ -52,7 +53,8 @@ int main() {
         getline(cin, name);
         cout << "Year: ";
         getline(cin, input);
-        ss << input;
+        //ss << input;
+        ss = stringstream(input);
         ss >> year;
         ss.flush();
         cout << "Publisher: ";
@@ -67,22 +69,25 @@ int main() {
         getline(cin, size);
         cout << "Cost: ";
         getline(cin, input);
-        ss << input;
+        //ss << input;
+        ss = stringstream(input);
         ss >> cost;
         ss.flush();
         cout << "Players: ";
         getline(cin, input);
-        ss << input;
+       // ss << input;
+       ss = stringstream(input);
         ss >> players;
         ss.flush();
         newGame = new VideoGame(name, year, publisher, system, genre, rating, size, cost, players);
+        newGame->print();
         gall->addGame(newGame);
+        break;
         }
         catch (...) {
             cout << "INVALID INPUT>>>TRY AGAIN\n\n ";
             break;
         }
-        break;
         case '2': cout << "How would you like to delete a video game?\n"
                         << "1. Name\n"
                         << "2. Year\n"
@@ -249,7 +254,7 @@ int main() {
 
     } while (!exit);
 
-    gall->save("games.JSON");
+    //gall->save("games.JSON");
 
     return 0;
 }

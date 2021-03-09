@@ -13,7 +13,7 @@ using namespace std;
     void GameGallery::save(string save_file="games.JSON") {
         file->setFilename(save_file);
         file->setGallery(this->gallery);
-        json j=file->load();
+        json j=file->newJSON();
         file->save(j);
         cout << "the Video Game data has been saved.\n\n ";
     }
