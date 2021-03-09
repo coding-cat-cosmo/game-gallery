@@ -64,7 +64,40 @@ class fileManip{
 	json newJSON();
 	
 	Collection fileRead(json j);
+
+	 /**           
+  	 * @brief: sets new file name
+  	 *
+  	 * @param: newName string for the file
+  	 * @return: None
+         */
+
+	void setFilename(std::string newName);
+
+	/**           
+  	 * @brief: sets new gallery collection
+  	 *
+  	 * @param: Collection gall pointer
+  	 * @return: None
+         */
+
+	void setGallery(Collection* gall);
 	
+	/**           
+  	 * @brief: gets filename
+  	 *
+  	 * @param: None
+  	 * @return: string filename
+         */
+	std::string getFilename() const;
+	/**           
+  	 * @brief: gets gallery collection
+  	 *
+  	 * @param: None
+  	 * @return: Collection gallery
+         */
+
+	Collection* getGallery() const;
 };
 
 

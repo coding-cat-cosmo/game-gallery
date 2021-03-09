@@ -16,6 +16,7 @@ class SearchPub: public Searcher{
                         return gal->getCollection()[i];
                         }
                 }
+                return nullptr;
         }
 
 };

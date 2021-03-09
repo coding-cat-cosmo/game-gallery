@@ -22,7 +22,7 @@ int main() {
 	string publisher;
 	string system;
 	string genre;
-	char rating = 'E';
+	string rating = "E";
 	string size;
 	unsigned int cost = 60;
 	unsigned int players = 2;
@@ -62,8 +62,7 @@ int main() {
         cout << "Genre: ";
         getline(cin, genre);
         cout << "Rating: ";
-        getline(cin, input);
-        rating = input[0];
+        getline(cin, rating);
         cout << "Size: ";
         getline(cin, size);
         cout << "Cost: ";
@@ -240,7 +239,7 @@ int main() {
         break;
         case '5': gall->print();
         break;
-        case '6': gall->save();
+        case '6': gall->save("games.JSON");
         break;
         case '7': exit = true;
         break;
@@ -250,7 +249,7 @@ int main() {
 
     } while (!exit);
 
-    gall->save();
+    gall->save("games.JSON");
 
     return 0;
 }

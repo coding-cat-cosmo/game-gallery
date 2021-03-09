@@ -98,3 +98,19 @@ using json = nlohmann::json;
 		}	
 		return gallery;
 	}
+
+void fileManip::setFilename(std::string newName) {
+		filename = newName;
+	}
+
+void fileManip::setGallery(Collection* gall) {
+	gallery = gall;
+	}
+
+std::string fileManip::getFilename() const {
+	return filename;
+	}
+
+Collection* fileManip::getGallery() const {
+	return gallery;
+	}

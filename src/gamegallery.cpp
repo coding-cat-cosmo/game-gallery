@@ -11,21 +11,22 @@ using namespace std;
     }
 
     void GameGallery::save(string save_file="games.JSON") {
-        file->fileName = save_file;
-        file->gallery = this->gallery;
-        file->save();
+        file->setFilename(save_file);
+        file->setGallery(this->gallery);
+        json j=file->load();
+        file->save(j);
         cout << "the Video Game data has been saved.\n\n ";
     }
 
     void GameGallery::load(string load_file="games.JSON") {
-        file->fileName = load_file;
+        file->setFilename(load_file);
         json j=file->load();
 	Collection m=file->fileRead(j);
 	vector<VideoGame*> t1;
 	Collection* gal= new Collection(t1);
-	for(int i=0;i<m->getCollection().size();++i){
-	gal.add(new VideoGame(m->getCollection()[i]->getName(),m->getCollection()[i]->getYear(),m->getCollection()[i]->getPub(),m->getCollection()[i]->getSystem(),
-	m->getCollection()[i]->getGenre(),m->getCollection()[i]->getRating(),m->getCollection()[i]->getSize(),m->getCollection()[i]->getCost(),m->getCollection()[i]->getPlayer());
+	for(int i=0;i<m.getCollection().size();++i){
+	gal->add(new VideoGame(m.getCollection()[i]->getName(),m.getCollection()[i]->getYear(),m.getCollection()[i]->getPub(),m.getCollection()[i]->getSystem(),
+	m.getCollection()[i]->getGenre(),m.getCollection()[i]->getRating(),m.getCollection()[i]->getSize(),m.getCollection()[i]->getCost(),m.getCollection()[i]->getPlayer()));
 	}
 	this->gallery=gal;
         cout << "the Video Game data has been loaded.\n\n ";
@@ -41,7 +42,7 @@ using namespace std;
         how_sort = sort;
     }
 
-    VideoGame GameGallery::search(string key) const {
+    VideoGame* GameGallery::search(string key) const {
         return how_search->search(gallery, key);
     }
 
@@ -54,15 +55,11 @@ using namespace std;
     }
 
     void GameGallery::delGame(VideoGame* badGame) {
-        if (how_search(badGame) == nullptr) {
-            cout << "Video Game that is trying to be deleted does not exist in this database.\n\n";
-            return;
-        }
-        else {
-            gallery->delete(badGame);
-        }
+        gallery->eliminate(badGame);
     }
 
     void GameGallery::print() const {
-        cout << "Collection:\n" << gallery->print() << "\nfile name:\n" << file->fileName << endl << endl;
+        cout << "Collection:\n";
+         gallery->print();
+         cout << "\nfile name:\n" << file->getFilename() << endl << endl;
     }

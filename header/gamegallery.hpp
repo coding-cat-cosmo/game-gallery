@@ -31,7 +31,7 @@ class GameGallery {
 	 * @return: GameGallery Object
 	 */
     //might change filemanip based on how its done later
-    GameGallery(Collection* gal, string file_in, Searcher* search, Sorter* sort) : gallery(gal), file(file_in),
+    GameGallery(Collection* gal, Searcher* search, Sorter* sort) : gallery(gal), file(new fileManip()),
      how_search(search), how_sort(sort) {}
      /**
 	 * @brief: destructor of the GameGallery class
@@ -74,7 +74,7 @@ class GameGallery {
 	 * @param: None
 	 * @return: VideoGame object
 	 */
-    VideoGame search(string key) const;
+    VideoGame* search(string key) const;
     /**
 	 * @brief: Sorts the VideoGame Collection by calling the particular run-time implementation of sorting selected
 	 * 

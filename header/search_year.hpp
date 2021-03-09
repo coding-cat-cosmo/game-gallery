@@ -15,6 +15,7 @@ class SearchYear: public Searcher{
                         return gal->getCollection()[i];
                         }
                 }
+                return nullptr;
         }
 
 };
