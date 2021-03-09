@@ -20,6 +20,7 @@ class fileManip{
 	std::string filename;
 	Collection* gallery;
 	vector <VideoGame*> games;
+	int jsontrack;
 
 	public:
         fileManip(std::string name);
@@ -61,7 +62,7 @@ class fileManip{
 
 	json newJSON();
 	
-	
+	Collection fileRead(json j);
 	
 };
 
