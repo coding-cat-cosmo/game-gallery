@@ -44,7 +44,7 @@ TEST(filemanipTest, emptyGalleryTest){
 
 TEST(filemanipTest, GalleryTest){
         vector<VideoGame*> vidGames;
-	VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
+	VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
 	Collection* gallery = new Collection(vidGames);
 	gallery->add(vid);
         fileManip* file=new fileManip("n2",gallery);
@@ -59,7 +59,7 @@ TEST(filemanipTest, GalleryTest){
            }
 TEST(filemanipTest, readFileTest){
         vector<VideoGame*> vidGames;
-        VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
+        VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
         Collection* gallery = new Collection(vidGames);
         gallery->add(vid);
         fileManip* file=new fileManip("n2",gallery);
@@ -74,7 +74,7 @@ TEST(filemanipTest, readFileTest){
 	}
 TEST(filemanipTest, addingAfterfileRead){
         vector<VideoGame*> vidGames;
-        VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
+        VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
         Collection* gallery = new Collection(vidGames);
         gallery->add(vid);
         fileManip* file=new fileManip("n2",gallery);
@@ -85,7 +85,7 @@ TEST(filemanipTest, addingAfterfileRead){
 	vector<VideoGame*> testgames;
 	vector<VideoGame*> file1=test.getCollection();
 	VideoGame* vidnew = new VideoGame(file1[0]->getName(),file1[0]->getYear(),file1[0]->getPub(),file1[0]->getSystem(),file1[0]->getGenre(),file1[0]->getRating(),file1[0]->getSize(),file1[0]->getCost(),file1[0]->getPlayer());
-	VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", 'E', "1 GB", 27, 1);
+	VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
 	
 	Collection* gal = new Collection(testgames);
 	gal->add(vidnew);
@@ -100,8 +100,8 @@ TEST(filemanipTest, addingAfterfileRead){
 	
 TEST(filemanipTest, readFileMultiVideoGameTest){
         vector<VideoGame*> vidGames;
-        VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", 'T', "2 GB", 40, 2);
-        VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", 'E', "1 GB", 27, 1);
+        VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
+        VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
 	Collection* gallery = new Collection(vidGames);
         gallery->add(vid);
 	gallery->add(vidTwo);
