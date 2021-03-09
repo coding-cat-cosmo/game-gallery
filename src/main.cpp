@@ -28,7 +28,7 @@ int main() {
 	unsigned int players = 2;
     stringstream ss;
     VideoGame* newGame;
-    GameGallery gall;
+    GameGallery* gall;
 
     //gall->load();
 
@@ -77,7 +77,7 @@ int main() {
         ss >> players;
         ss.flush();
         newGame = new VideoGame(name, year, publisher, system, genre, rating, size, cost, players);
-        gall.addGame(newGame);
+        gall->addGame(newGame);
         }
         catch (...) {
             cout << "INVALID INPUT>>>TRY AGAIN\n\n ";
@@ -96,7 +96,7 @@ int main() {
             gall->setSearch(new SearchName);
             cout <<"Enter the name of the Video Game\nName: ";
             getline(cin, name);
-            newGame = gall.search(name);
+            newGame = gall->search(name);
             if (newGame != nullptr) {
             gall->delGame(newGame);
             cout << "Game was successfully deleted.\n\n";
@@ -109,7 +109,7 @@ int main() {
             gall->setSearch(new SearchYear);
             cout <<"Enter the year of the Video Game\nYear: ";
             getline(cin, input);
-            newGame = gall.search(input);
+            newGame = gall->search(input);
             if (newGame != nullptr) {
             gall->delGame(newGame);
             cout << "Game was successfully deleted.\n\n";
@@ -122,7 +122,7 @@ int main() {
             gall->setSearch(new SearchPub);
             cout <<"Enter the publisher of the Video Game\nName: ";
             getline(cin, publisher);
-            newGame = gall.search(publisher);
+            newGame = gall->search(publisher);
             if (newGame != nullptr) {
             gall->delGame(newGame);
             cout << "Game was successfully deleted.\n\n";
@@ -135,7 +135,7 @@ int main() {
             gall->setSearch(new SearchGenre);
             cout <<"Enter the genre of the Video Game\nName: ";
             getline(cin, genre);
-            newGame = gall.search(genre);
+            newGame = gall->search(genre);
             if (newGame != nullptr) {
             gall->delGame(newGame);
             cout << "Game was successfully deleted.\n\n";
@@ -161,7 +161,7 @@ int main() {
             gall->setSearch(new SearchName);
             cout <<"Enter the name of the Video Game\nName: ";
             getline(cin, name);
-            newGame = gall.search(name);
+            newGame = gall->search(name);
             if (newGame != nullptr) {
             newGame->print();
             }
@@ -173,7 +173,7 @@ int main() {
             gall->setSearch(new SearchYear);
             cout <<"Enter the year of the Video Game\nYear: ";
             getline(cin, input);
-            newGame = gall.search(input);
+            newGame = gall->search(input);
             if (newGame != nullptr) {
             newGame->print();
             }
@@ -185,7 +185,7 @@ int main() {
             gall->setSearch(new SearchPub);
             cout <<"Enter the publisher of the Video Game\nName: ";
             getline(cin, publisher);
-            newGame = gall.search(publisher);
+            newGame = gall->search(publisher);
             if (newGame != nullptr) {
             newGame->print();
             }
@@ -197,7 +197,7 @@ int main() {
             gall->setSearch(new SearchGenre);
             cout <<"Enter the genre of the Video Game\nName: ";
             getline(cin, genre);
-            newGame = gall.search(genre);
+            newGame = gall->search(genre);
             if (newGame != nullptr) {
             newGame->print();
             }
