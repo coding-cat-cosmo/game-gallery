@@ -36,6 +36,8 @@ ADD_EXECUTABLE(game
 			src/main.cpp
 			)
 
+TARGET_LINK_LIBRARIES(game PRIVATE nlohmann_json::nlohmann_json)
+	
 TARGET_LINK_LIBRARIES(jsonmain PRIVATE nlohmann_json::nlohmann_json)
 
 TARGET_LINK_LIBRARIES(header PRIVATE nlohmann_json::nlohmann_json)
