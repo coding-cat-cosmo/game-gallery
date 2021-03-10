@@ -41,13 +41,6 @@ The actual manipulation (like adding and deleting video games) of the data from 
  File manipulation is done in its own class to avoid having too heavy of a load on the base class. The class itself will work directly with a JSON file. 
  
  ![Class Diagram](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/Class%20Diagram%20(5).png)
-
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
  ![NewFileandAdd](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectNewFile%26Add.png)
@@ -57,12 +50,11 @@ The actual manipulation (like adding and deleting video games) of the data from 
  ![Delete](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectDelete.png)
  ![FinalFile](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectfile.png)
  ## Installation/Usage
->Run cmake to make the tests and the executable itself where you can load save and create a gamegallery
->and ./game is the executable.
->You can enter in a new file with a name or load an old file by name and add, delete, search, sort, or print your video games. 
->Prompts are given on what to enter for each operation you perform on the database. 
->Doxygen requires flex, bison, libiconv, GNU, python 2.7 and higher and cmake 3.3 or later.
+Run cmake to make the tests and the executable itself where you can load save and create a gamegallery and ./game is the executable.
+You can enter in a new file with a name or load an old file by name and add, delete, search, sort, or print your video games. 
+Prompts are given on what to enter for each operation you perform on the database. 
+Doxygen requires flex, bison, libiconv, GNU, python 2.7 and higher and cmake 3.3 or later.
  ## Testing
- >Our project was tested using googletest which works well since we made it exclusively using c++ as well as using valgrind for memory leaks and JSON for file storing. 
- >We unit tested each class before adding it together into the master branch and then after adding fixed up the interface and operations for the database.
+ Our project was tested using googletest which works well since we made it exclusively using c++ as well as using valgrind for memory leaks and JSON for file storing. 
+ We unit tested each class before adding it together into the master branch and then after adding fixed up the interface and operations for the database.
  
