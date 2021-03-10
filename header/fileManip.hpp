@@ -11,7 +11,7 @@
 using json = nlohmann::json;
 
 /**
- 	* @brief: This class has all the main functionality for any desirable action to be ran on the videoGame database
+ 	* @brief: This class has all the main functionality for any desirable action on files
  	* 
 	*/
 
