@@ -32,8 +32,10 @@ using namespace std;
 	Collection* gal= new Collection(t1);
 	for(int i=0;i<m.getCollection().size();++i){
 	gal->add(new VideoGame(m.getCollection()[i]->getName(),m.getCollection()[i]->getYear(),m.getCollection()[i]->getPub(),m.getCollection()[i]->getSystem(),
-	m.getCollection()[i]->getGenre(),m.getCollection()[i]->getRating(),m.getCollection()[i]->getSize(),m.getCollection()[i]->getCost(),m.getCollection()[i]->getPlayer()));
+	m.getCollection()[i]->getGenre(),m.getCollection()[i]->getRating(),m.getCollection()[i]->getSize(),
+	m.getCollection()[i]->getCost(),m.getCollection()[i]->getPlayer()));
 	}
+	delete gallery;
 	this->gallery=gal;
 	file->setGallery(gallery);
 	file->save(j);
