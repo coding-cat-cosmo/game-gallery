@@ -20,9 +20,9 @@ class fileManip{
 	std::string filename;
 	Collection* gallery;
 	vector <VideoGame*> games;
-	int jsontrack;
 
 	public:
+	int jsontrack;
 	fileManip(){}
         fileManip(std::string name);
 	/**

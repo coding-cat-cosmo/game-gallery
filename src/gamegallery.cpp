@@ -1,5 +1,6 @@
 #include "../header/gamegallery.hpp"
 #include <string>
+#include <iostream>
 #include "nlohmann/json.hpp"
 using namespace std;
 
@@ -11,24 +12,20 @@ using namespace std;
     }
 
     void GameGallery::save(string save_file) {
-        file->setFilename(save_file);
-        file->setGallery(this->gallery);
-        json j=file->newJSON();
+	json j=file->newJSON();
         file->save(j);
         cout << "the Video Game data has been saved.\n\n ";
     }
     void GameGallery::newFile(string new_file){
 	file->setFilename(new_file);
-	//fileManip* nf=new fileManip(new_file,gallery);
-	//file=nf;
 	file->setGallery(gallery);
-	cout <<"t1\n";
 	json j=file->newJSON();
 	cout << "the new file has been created.\n\n ";	
 	}
 
     void GameGallery::load(string load_file) {
         file->setFilename(load_file);
+	file->setGallery(gallery);
         json j=file->load();
 	Collection m=file->fileRead(j);
 	vector<VideoGame*> t1;
@@ -38,6 +35,9 @@ using namespace std;
 	m.getCollection()[i]->getGenre(),m.getCollection()[i]->getRating(),m.getCollection()[i]->getSize(),m.getCollection()[i]->getCost(),m.getCollection()[i]->getPlayer()));
 	}
 	this->gallery=gal;
+	file->setGallery(gallery);
+	file->save(j);
+	j=file->load();
         cout << "the Video Game data has been loaded.\n\n ";
     }
 

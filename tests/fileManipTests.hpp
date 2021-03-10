@@ -60,8 +60,10 @@ TEST(filemanipTest, GalleryTest){
 TEST(filemanipTest, readFileTest){
         vector<VideoGame*> vidGames;
         VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
+	//VideoGame* vidTwo = new VideoGame("Minecraft", 2011, "Mojang", "PC, PS, Xbox", "adventure", "E", "1 GB", 27, 1);
         Collection* gallery = new Collection(vidGames);
         gallery->add(vid);
+	//gallery->add(vidTwo);
         fileManip* file=new fileManip("n3",gallery);
 	json j=file->newJSON();
 	file->save(j);

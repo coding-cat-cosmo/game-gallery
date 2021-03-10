@@ -25,10 +25,7 @@ using json = nlohmann::json;
 		o.open(filename);
 		string s;
 		json sj;
-		if(j.dump()!="null"){
-			s=j.dump();
-		}
-		
+
 		if(gallery!=nullptr&&gallery->getCollection().size()!=0){
 			for(int i=0;i<gallery->getCollection().size();++i){
 		sj[i+jsontrack]={ {"Id",gallery->getCollection()[i]->getId()}, {"Name",gallery->getCollection()[i]->getName()},
@@ -54,6 +51,7 @@ using json = nlohmann::json;
 		ifstream f(filename);
 		json j;
 		f >> j;
+		jsontrack=0;
 		int i=0;
 		if(gallery!=nullptr){
 			while(j[i].dump()!="null"){
@@ -63,6 +61,7 @@ using json = nlohmann::json;
 		}
 		return j;
 	}
+	
 	json fileManip::newJSON(){
 		ofstream nj(filename);
 		json j;
@@ -80,9 +79,11 @@ using json = nlohmann::json;
 		string size;
 		unsigned int cost;
 		unsigned int player;
-		char change='t';
+
 		Collection gallery;
 		for(int i=0;i<jsontrack;++i){
+		//while(j[i].dump()!="null"){
+		//	++i;
 			if(j[i].dump()!="null"){
 			name=j[i]["Name"];
 			year=j[i]["Year"];

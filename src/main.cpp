@@ -31,6 +31,7 @@ int main() {
     VideoGame* newGame;
     GameGallery* gall=new GameGallery();	
         
+	
     cout << "Welcome to GameGallery!\n\n Please select the operation to perform on your file\n"
 	 << "1. Load file. \n"
 	 << "2. New File. \n\n";
@@ -44,7 +45,7 @@ int main() {
     if(choice=='2'){
 	cout << "Input desired file name.\n\n";
 	getline(cin, name);
-	gall->newFile(name);	
+	gall->newFile(name);
     }
     
     choice = '5';
@@ -260,7 +261,7 @@ int main() {
         break;
         case '5': gall->print();
         break;
-        case '6': gall->save("games.JSON");
+        case '6': gall->save(name);
         break;
         case '7': exit = true;
         break;
@@ -270,7 +271,7 @@ int main() {
 
     } while (!exit);
 
-    //gall->save("games.JSON");
+    gall->save(name);
 
     return 0;
 }
