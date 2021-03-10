@@ -3,6 +3,10 @@
 #include "sorter.hpp"
 #include "collection.hpp"
 
+/**
+ 	* @brief: This class sorts the Collection by year
+ 	*
+ 	*/
 class Sort_Year: public Sorter {
    public:
 	/**

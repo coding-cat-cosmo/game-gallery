@@ -3,6 +3,10 @@
 #include "collection.hpp"
 #include "videogame.hpp"
 
+/**
+ 	* @brief: This class is the abstract class for the Sorter
+ 	*
+ 	*/
 class Sorter {
    public:
 	/*

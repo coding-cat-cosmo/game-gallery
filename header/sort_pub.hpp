@@ -3,6 +3,10 @@
 #include "sorter.hpp"
 #include "collection.hpp"
 
+/**
+ 	* @brief: This class sorts the Collection by publisher
+ 	*
+ 	*/
 class Sort_Pub: public Sorter {
    public:
 	/**
