@@ -40,13 +40,20 @@ class GameGallery {
 	 * @return: GameGallery Object
 	 */
     ~GameGallery();
+     /**
+         * @brief: saves the current database to a file using Filemanip
+         *
+         * @param: string new_file for name of file
+         * @return: None
+         */
+
+     void newFile(string new_file);
     /**
 	 * @brief: saves the current database to a file using Filemanip
 	 * 
 	 * @param: string save_file for name of file to save to
 	 * @return: None
 	 */
-    void newFile(string new_file);
     void save(string save_file);
     /**
 	 * @brief: loads the file to the database using Filemanip

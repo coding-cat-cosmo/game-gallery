@@ -19,7 +19,6 @@ class fileManip{
 	private:
 	std::string filename;
 	Collection* gallery;
-	vector <VideoGame*> games;
 
 	public:
 	int jsontrack;
@@ -62,7 +61,12 @@ class fileManip{
          */
 
 	json newJSON();
-	
+	/**
+ 	 * @brief: creates a new JSON file into the database
+ 	 *
+ 	 * @param: Json object to access what is inside the file
+	 * @return: returns a Collection object
+	*/
 	Collection fileRead(json j);
 
 	 /**           
