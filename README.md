@@ -40,7 +40,7 @@ The actual manipulation (like adding and deleting video games) of the data from 
 
  File manipulation is done in its own class to avoid having too heavy of a load on the base class. The class itself will work directly with a JSON file. 
  
- ![Class Diagram](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/Class%20Diagram%20(4).png)
+ ![Class Diagram](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/Class%20Diagram%20(5).png)
 
  
  > ## Phase III
