@@ -12,7 +12,7 @@
 	}
 	
 	void VideoGame::print() const {
-        cout << "ID: " << getId() << " Name: " << getName() << " Year: " << getYear() 
+        cout << "VideoGame:\nID: " << getId() << " Name: " << getName() << " Year: " << getYear() 
         << " Publisher: " << getPub() << " System: " << getSystem() 
         << " Genre: " << getGenre() << " Rating: " << getRating() << " Size: " << getSize()
         << " Cost: " << getCost() << " Player: " << getPlayer() << endl << endl;

@@ -68,7 +68,6 @@ using namespace std;
     }
 
     void GameGallery::print() const {
-        cout << "Collection:\n";
          gallery->print();
-         cout << "\nfile name:\n" << file->getFilename() << endl << endl;
+         cout << "file name:\n" << file->getFilename() << endl << endl;
     }

@@ -46,7 +46,7 @@ class VideoGame {
 	 * @param: None
 	 * @return: None
 	 */
-		~VideoGame() {}
+		~VideoGame() {newID--;}
 		/**
 	 * @brief: basic print function that prints out all the video game data
 	 * 

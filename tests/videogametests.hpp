@@ -27,7 +27,7 @@ TEST(actualConstructorTest, samePassedInValues) {
         EXPECT_EQ("2 GB", vid->getSize());
         EXPECT_EQ(40, vid->getCost());
         EXPECT_EQ(2, vid->getPlayer());
-        EXPECT_EQ(2, vid->getId());
+        EXPECT_EQ(1, vid->getId());
         
         delete vid;
 	}

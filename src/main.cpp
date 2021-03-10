@@ -17,6 +17,7 @@ int main() {
     char choice = '5';
     char type = '1';
     bool exit = false;
+    bool made = false;
     string input;
     string name;
 	unsigned int year = 2000;
@@ -31,21 +32,26 @@ int main() {
     VideoGame* newGame;
     GameGallery* gall=new GameGallery();	
         
-	
+	while (!made) {
     cout << "Welcome to GameGallery!\n\n Please select the operation to perform on your file\n"
 	 << "1. Load file. \n"
 	 << "2. New File. \n\n";
     getline(cin, input);
     choice = input[0];
-    if(choice=='1'){
-	cout << "Input file name.\n\n";
+    switch(choice){
+        case '1': cout << "Input file name.\n\n";
 	getline(cin, name);
 	gall->load(name);
-    }
-    if(choice=='2'){
-	cout << "Input desired file name.\n\n";
+    made = true;
+    break;
+    case '2': cout << "Input desired file name.\n\n";
 	getline(cin, name);
 	gall->newFile(name);
+    made = true;
+    break;
+    default: cout << "That is not a valid option.\n\n";
+    break;
+    }
     }
     
     choice = '5';
@@ -242,18 +248,22 @@ int main() {
         if (type == '1' ) {
             gall->setSort(new Sort_Name);
             gall->sort();
+            cout << "The collection was sorted alphabetically by name\n\n";
         }
         else if (type == '2') {
             gall->setSort(new Sort_Year);
             gall->sort();
+            cout << "The collection was sorted numerically by year\n\n";
         }
         else if (type == '3') {
             gall->setSort(new Sort_Pub);
             gall->sort();
+            cout << "The collection was sorted alphabetically by publisher\n\n";
         }
         else if (type == '4') {
             gall->setSort(new Sort_Genre);
             gall->sort();
+            cout << "The collection was sorted alphabetically by genre\n\n";
         }
         else {
             cout << "That is not a valid choice.\n\n";
@@ -262,6 +272,7 @@ int main() {
         case '5': gall->print();
         break;
         case '6': gall->save(name);
+        cout << "Gallery was saved to the file.\n\n";
         break;
         case '7': exit = true;
         break;
@@ -271,7 +282,12 @@ int main() {
 
     } while (!exit);
 
+    cout << "Thanks for using Game Gallery!\n\n";
+
     gall->save(name);
+
+    delete gall;
+    gall = nullptr;
 
     return 0;
 }
