@@ -29,13 +29,29 @@ int main() {
 	unsigned int players = 2;
     stringstream ss;
     VideoGame* newGame;
-    GameGallery* gall;
-
-    //gall->load();
+    GameGallery* gall=new GameGallery();	
+        
+    cout << "Welcome to GameGallery!\n\n Please select the operation to perform on your file\n"
+	 << "1. Load file. \n"
+	 << "2. New File. \n\n";
+    getline(cin, input);
+    choice = input[0];
+    if(choice=='1'){
+	cout << "Input file name.\n\n";
+	getline(cin, name);
+	gall->load(name);
+    }
+    if(choice=='2'){
+	cout << "Input desired file name.\n\n";
+	getline(cin, name);
+	gall->newFile(name);	
+    }
+    
+    choice = '5';
 
     do { 
 
-    cout << "Welcome to GameGallery!\n\n Please select the operation to perform on your Video Games\n"
+    cout << "Please select the operation to perform on your Video Games\n"
          << "1. add a video game.\n"
          << "2. delete a video game.\n"
          << "3. search for a video game.\n"

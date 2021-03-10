@@ -10,15 +10,24 @@ using namespace std;
         delete how_sort;
     }
 
-    void GameGallery::save(string save_file="games.JSON") {
+    void GameGallery::save(string save_file) {
         file->setFilename(save_file);
         file->setGallery(this->gallery);
         json j=file->newJSON();
         file->save(j);
         cout << "the Video Game data has been saved.\n\n ";
     }
+    void GameGallery::newFile(string new_file){
+	file->setFilename(new_file);
+	//fileManip* nf=new fileManip(new_file,gallery);
+	//file=nf;
+	file->setGallery(gallery);
+	cout <<"t1\n";
+	json j=file->newJSON();
+	cout << "the new file has been created.\n\n ";	
+	}
 
-    void GameGallery::load(string load_file="games.JSON") {
+    void GameGallery::load(string load_file) {
         file->setFilename(load_file);
         json j=file->load();
 	Collection m=file->fileRead(j);

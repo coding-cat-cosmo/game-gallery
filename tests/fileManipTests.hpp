@@ -62,13 +62,13 @@ TEST(filemanipTest, readFileTest){
         VideoGame* vid = new VideoGame("Pac-Man", 2000, "NAMACO", "Genesis", "puzzle", "T", "2 GB", 40, 2);
         Collection* gallery = new Collection(vidGames);
         gallery->add(vid);
-        fileManip* file=new fileManip("n2",gallery);
+        fileManip* file=new fileManip("n3",gallery);
 	json j=file->newJSON();
 	file->save(j);
 	json k=file->load();
 	Collection test=file->fileRead(k);
 	EXPECT_EQ(test.getCollection()[0]->getName(),gallery->getCollection()[0]->getName());
-	remove("n2");
+	//remove("n3");
 	delete gallery;
 	delete file;
 	}

@@ -31,7 +31,7 @@ class GameGallery {
 	 * @return: GameGallery Object
 	 */
     //might change filemanip based on how its done later
-    GameGallery(Collection* gal, Searcher* search, Sorter* sort) : gallery(gal), file(new fileManip()),
+    GameGallery(Collection* gal, string file_in, Searcher* search, Sorter* sort) : gallery(gal), file(new fileManip(file_in,gal)),
      how_search(search), how_sort(sort) {}
      /**
 	 * @brief: destructor of the GameGallery class
@@ -46,6 +46,7 @@ class GameGallery {
 	 * @param: string save_file for name of file to save to
 	 * @return: None
 	 */
+    void newFile(string new_file);
     void save(string save_file);
     /**
 	 * @brief: loads the file to the database using Filemanip

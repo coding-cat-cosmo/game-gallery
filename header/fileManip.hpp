@@ -23,7 +23,7 @@ class fileManip{
 	int jsontrack;
 
 	public:
-	fileManip();
+	fileManip(){}
         fileManip(std::string name);
 	/**
 	 * @brief: constructor of the fileManip class that initializes with passed in objects

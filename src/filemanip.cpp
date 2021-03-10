@@ -17,7 +17,6 @@ using json = nlohmann::json;
 	fileManip::fileManip(string name,Collection* gal){
 	filename=name;
 	gallery=gal;
-	games=gal->getCollection();
 	jsontrack=0;
 	}
 
@@ -30,11 +29,13 @@ using json = nlohmann::json;
 			s=j.dump();
 		}
 		
-		if(gallery!=nullptr&&games.size()!=0){
-			for(int i=0;i<games.size();++i){
-		sj[i+jsontrack]={ {"Id",games[i]->getId()}, {"Name",games[i]->getName()}, {"Year",games[i]->getYear()}, {"Publisher",games[i]->getPub()},
-		{"System",games[i]->getSystem()}, {"Genre",games[i]->getGenre()},  {"Rating",games[i]->getRating()}, {"Size",games[i]->getSize()},
-		 {"Cost",games[i]->getCost()}, {"Player",games[i]->getPlayer()}};
+		if(gallery!=nullptr&&gallery->getCollection().size()!=0){
+			for(int i=0;i<gallery->getCollection().size();++i){
+		sj[i+jsontrack]={ {"Id",gallery->getCollection()[i]->getId()}, {"Name",gallery->getCollection()[i]->getName()},
+		 {"Year",gallery->getCollection()[i]->getYear()}, {"Publisher",gallery->getCollection()[i]->getPub()}, 
+		 {"System",gallery->getCollection()[i]->getSystem()}, {"Genre",gallery->getCollection()[i]->getGenre()},
+		 {"Rating",gallery->getCollection()[i]->getRating()}, {"Size",gallery->getCollection()[i]->getSize()},
+		 {"Cost",gallery->getCollection()[i]->getCost()}, {"Player",gallery->getCollection()[i]->getPlayer()}};
 			
 			//made a json initializer instead of string to json initializer but format did not look goo but kept it incase client wants it in that format	
 			//sj[i]=games[i]->getjsonstring();
