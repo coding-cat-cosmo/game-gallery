@@ -11,6 +11,13 @@
 class SearchName: public Searcher{
         public:
 	/**
+  	 * @brief: constructor of the SearchName class
+  	 * 
+  	 * @param: None
+  	 * @return: SearchName object
+  	 */
+	SearchName(){}
+	/**
   	 * @brief: destructor of the SearchName class
   	 * 
   	 * @param: None
