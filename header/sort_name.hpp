@@ -3,6 +3,10 @@
 #include "sorter.hpp"
 #include "collection.hpp"
 
+/**
+ 	* @brief: This class sorts the Collection by name
+ 	*
+ 	*/
 class Sort_Name: public Sorter {
    public:
 	/**

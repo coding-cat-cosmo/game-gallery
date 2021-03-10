@@ -14,7 +14,7 @@ The language we will be implementing this database with is C++.
   * [JSON](https://github.com/nlohmann/json) for storage of data for video games within the database
   * [GitHub](https://github.com/) for code repository and to share code with each person
   * [Google Tests](https://github.com/google/googletest) for testing classes/units/funtions/etc.
-  * [Valgrind](https://valgrind.org/) for testing classes/units/functions for memory leaks.
+  * [Valgrind](https://valgrind.org/) for testing classes/units/functions for memory leaks
 
 The input should be data about the video game such as title, genre, system, etc.
 The output should be data about the game selected by the user.
@@ -40,28 +40,21 @@ The actual manipulation (like adding and deleting video games) of the data from 
 
  File manipulation is done in its own class to avoid having too heavy of a load on the base class. The class itself will work directly with a JSON file. 
  
- ![Class Diagram](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/Class%20Diagram%20(4).png)
-
- 
- > ## Phase III
- > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
- > * Before the meeting you should perform a sprint plan like you did in Phase II
- > * In the meeting with your TA you will discuss: 
- >   - How effective your last sprint was (each member should talk about what they did)
- >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- >   - What tasks you are planning for this next sprint.
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
+ ![Class Diagram](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/Class%20Diagram%20(5).png)
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ ![NewFileandAdd](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectNewFile%26Add.png)
+ ![PrintandExit](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectPrint%26Exit.png)
+ ![LoadFileandSearch](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectLoadFile%26Search.png)
+ ![Sort](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectSort.png)
+ ![Delete](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectDelete.png)
+ ![FinalFile](https://github.com/cs100/final-project-mhunt023-cphu003-rchan121/blob/master/cs100projectfile.png)
  ## Installation/Usage
- > Instructions on installing and running your application
+Run cmake to make the tests and the executable itself where you can load save and create a gamegallery, and ./game is the executable.
+You can enter in a new file with a name or load an old file by name and add, delete, search, sort, or print your video games. 
+Prompts are given on what to enter for each operation you perform on the database. 
+Doxygen requires flex, bison, libiconv, GNU, Python 2.7 and higher and CMake 3.3 or later.
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ Our project was tested using googletest which works well since we made it exclusively using C++ as well as using valgrind for memory leaks and JSON for file storing. 
+ We unit tested each class before adding it together into the master branch and then after adding fixed up the interface and operations for the database.
  

@@ -9,7 +9,6 @@ using namespace std;
 
 /**
 	* @brief: This class has all the data related to Collection in the database.
-	*
 	* 
 	*/
 class Collection {
@@ -37,7 +36,12 @@ class Collection {
 	 * @return: None
 	 */
 	~Collection();
-
+	/**
+ 	 * @brief: returns the vector of VideoGame pointers in the Collection
+ 	 *
+ 	 * @param: none
+ 	 * @return: vector of VideoGame object pointers
+ 	 */
 	vector<VideoGame*> getCollection(){return games;};
   
 	/**

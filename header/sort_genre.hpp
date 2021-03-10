@@ -3,6 +3,10 @@
 #include "sorter.hpp"
 #include "collection.hpp"
 
+/**
+ 	* @brief: This class sorts the Collection by genre
+ 	*
+ 	*/
 class Sort_Genre: public Sorter {
    public:
 	/**
